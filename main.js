@@ -32,7 +32,7 @@ if (cantPersonas === 0) {
 */
 
 //Tercer desafio (Arrays)
-
+/*
 //ARRAYS    
 let abril = ["Batman", "Sonic", "Morbius", "La Ciudad Perdida", "El Buen Patron"]
 let mayo = ["Dr Strange", "La Medium", "Maverick", "Supermascotas"]
@@ -79,3 +79,54 @@ for(i = 0; i < carteleraJunio.length; i++){
 }
 
 console.log (carteleraJunio)
+*/
+
+//*********************PRIMER DESAFIO FINAL***********************
+
+
+class Estreno {
+    constructor (pelicula, genero, duracion, clasificacion, mes){
+        this.pelicula = pelicula
+        this.genero = genero
+        this.duracion = duracion
+        this.clasificacion = clasificacion
+        this.mes = mes
+    }
+}
+
+const Estreno1 = new Estreno ("Batman", "Accion", 176, "+16", "abril")
+const Estreno2 = new Estreno ("Sonic", "Animacion", 122, "+13", "abril")
+const Estreno3 = new Estreno ("Morbius", "Accion", 108, "+13", "abril")
+const Estreno4 = new Estreno ("El Buen Patron", "Comedia", 120, "+13", "abril")
+const Estreno5 = new Estreno ("Jack caja Maldita", "Terror", 87, "+13", "abril")
+const Estreno6 = new Estreno ("Dr Strange", "Accion", 126, "AC", "mayo")
+const Estreno7 = new Estreno ("Supermascotas", "Animacion", 90, "ATP", "mayo")
+const Estreno8 = new Estreno ("La Medium", "Terror", 90, "+16", "mayo")
+const Estreno9 = new Estreno ("Top Gun Maverick", "Drama", 90, "+13", "mayo")
+const Estreno10 = new Estreno ("Jurassic World Dominio", "Ciencia Ficcion", 90, "+13", "junio")
+const Estreno11 = new Estreno ("Lighyear", "Animacion", 90, "ATP", "junio")
+const Estreno12 = new Estreno ("Gemelo Siniestro", "Terror", 90, "+16", "junio")
+const Estreno13 = new Estreno ("Minions 2", "Animacion", 90, "ATP", "junio")
+
+//*********************************************************************** */
+
+
+const Estrenos = [Estreno1, Estreno2, Estreno3, Estreno4, Estreno5, Estreno6, Estreno7, Estreno8, Estreno9, Estreno10, Estreno11, Estreno12, Estreno13]
+
+
+// UTILIZANDO METODO DE BUSQUEDA EN LOS ARRAYS (Mes y titulos de peliculas de ese mes)
+
+const resultado = Estrenos.filter(function (movie) {
+    return movie.mes === 'abril'
+})
+.map(function(movie){
+    return movie.pelicula;
+});
+
+
+console.log(resultado)
+
+
+
+
+
